@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-display: "Outfit", system-ui, -apple-system, sans-serif;
+
+  /* Standard Brand Palette (Extracted directly from BALU Logo) */
+  --color-balu-gold: #c89c50;
+  --color-balu-gold-50: #faf7f2;
+  --color-balu-gold-100: #f4edd9;
+  --color-balu-gold-200: #ead8b3;
+  --color-balu-gold-300: #dfc085;
+  --color-balu-gold-400: #d4a85c;
+  --color-balu-gold-500: #c89c50;
+  --color-balu-gold-600: #b08138;
+  --color-balu-gold-700: #8c6326;
+  --color-balu-gold-800: #714e21;
+  --color-balu-gold-900: #5c3f1d;
+
+  --color-balu-dark: #1e2024;
+  --color-balu-dark-50: #f6f7f8;
+  --color-balu-dark-100: #eceeef;
+  --color-balu-dark-200: #d5d8dc;
+  --color-balu-dark-300: #b1b6be;
+  --color-balu-dark-400: #6e7380;
+  --color-balu-dark-500: #444448;
+  --color-balu-dark-600: #333438;
+  --color-balu-dark-700: #25272c;
+  --color-balu-dark-800: #1e2024;
+  --color-balu-dark-900: #121316;
+  --color-balu-dark-950: #0a0b0d;
+}
+
+body {
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  background-color: #ffffff;
+  color: #1e2024;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f6f7f8;
+}
+::-webkit-scrollbar-thumb {
+  background: #d5d8dc;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #c89c50;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes float-delayed {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(6px);
+  }
+}
+
+.animate-float {
+  animation: float 4.5s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float-delayed 5s ease-in-out infinite;
+}

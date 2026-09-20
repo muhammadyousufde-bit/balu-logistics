@@ -1,0 +1,6 @@
+{
+  "name": "BALU Logistics",
+  "description": "Offizieller Amazon Delivery Service Partner (DSP) in Deutschland. Zuverlässige Paketzustellung auf der letzten Meile und faire Arbeitsplätze für Zustellfahrer.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
