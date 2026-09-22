@@ -3,8 +3,7 @@ import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 import { createServer as createViteServer } from "vite";
-
-const currentDir = typeof __dirname !== 'undefined' ? __dirname : path.dirname(fileURLToPath(import.meta.url || 'file://' + process.cwd()));
+const currentDir = typeof __dirname !== 'undefined' ? __dirname : process.cwd();
 
 interface DriverApplication {
   id: string;

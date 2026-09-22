@@ -87,16 +87,16 @@ app.use(express.json({ limit: "50mb" }));
 app.use(express.urlencoded({ extended: true, limit: "50mb" }));
 
 // Health check
-app.get("/api/health", (_req, res) => {
+app.get(["/api/health", "/health"], (_req, res) => {
   res.json({ status: "ok", timestamp: new Date().toISOString() });
 });
 
 // Settings endpoint
-app.get("/api/settings", (_req, res) => {
+app.get(["/api/settings", "/settings"], (_req, res) => {
   res.json(companySettings);
 });
 
-app.post("/api/settings", (req, res) => {
+app.post(["/api/settings", "/settings"], (req, res) => {
   try {
     companySettings = {
       ...companySettings,
@@ -109,11 +109,11 @@ app.post("/api/settings", (req, res) => {
 });
 
 // Driver Applications API
-app.get("/api/applications", (_req, res) => {
+app.get(["/api/applications", "/applications"], (_req, res) => {
   res.json(driverApplications);
 });
 
-app.post("/api/apply", (req, res) => {
+app.post(["/api/apply", "/apply"], (req, res) => {
   try {
     const body = req.body;
     if (!body.firstName || !body.lastName || !body.email || !body.phone) {
@@ -202,7 +202,7 @@ Zuständiger Amazon Verteilzentrum Hub: ${companySettings.amazonStationCode} (${
   }
 });
 
-app.patch("/api/applications/:id", (req, res) => {
+app.patch(["/api/applications/:id", "/applications/:id"], (req, res) => {
   const { id } = req.params;
   const { status } = req.body;
   const index = driverApplications.findIndex((a) => a.id === id);
@@ -214,7 +214,7 @@ app.patch("/api/applications/:id", (req, res) => {
 });
 
 // Contact form endpoint
-app.post("/api/contact", (req, res) => {
+app.post(["/api/contact", "/contact"], (req, res) => {
   const { name, email, phone, subject } = req.body;
   const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   if (!email || !emailRegex.test(String(email).trim())) {
