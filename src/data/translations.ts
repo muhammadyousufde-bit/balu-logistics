@@ -210,7 +210,7 @@ export interface TranslationContent {
 export const translations: Record<Language, TranslationContent> = {
   de: {
     topBar: {
-      partnerBadge: 'Offizieller Amazon Delivery Service Partner (DSP)',
+      partnerBadge: 'Authorized Amazon DSP',
       contactQuick: 'Amazon Verteilzentrum Paderborn (Navarrastr. 8)'
     },
     nav: {
@@ -541,7 +541,7 @@ export const translations: Record<Language, TranslationContent> = {
   },
   en: {
     topBar: {
-      partnerBadge: 'Authorized Amazon Delivery Service Partner (DSP)',
+      partnerBadge: 'Authorized Amazon DSP',
       contactQuick: 'Amazon Delivery Station Paderborn (Navarrastr. 8)'
     },
     nav: {

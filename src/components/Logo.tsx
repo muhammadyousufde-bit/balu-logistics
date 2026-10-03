@@ -47,11 +47,11 @@ export const Logo: React.FC<LogoProps> = ({
       </div>
 
       {showTagline && (
-        <div className="mt-0.5 pl-0.5">
+        <div className="mt-0.5 text-center w-full">
           <span
-            className={`font-semibold uppercase tracking-wider block ${taglineSize} text-[#8C6326]`}
+            className={`font-semibold tracking-wider block ${taglineSize} text-[#8C6326]`}
           >
-            Amazon DSP • Paderborn
+            Authorized Amazon DSP
           </span>
         </div>
       )}

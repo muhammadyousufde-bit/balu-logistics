@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle2, Shield, Zap, MapPin, Star, ChevronRight } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Shield, Zap, Star, ChevronRight } from 'lucide-react';
 import { CompanySettings, Language } from '../types';
 import { translations } from '../data/translations';
 
@@ -40,16 +40,6 @@ export const Hero: React.FC<HeroProps> = ({ settings, lang }) => {
           {/* Left Column: High-Impact Corporate Typography & Actions */}
           <div className="lg:col-span-6 space-y-6 text-left">
             
-            {/* Live Operational Status Eyebrow Badge */}
-            <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white/95 border border-[#EAD8B3] shadow-xs backdrop-blur-md">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#C89C50] opacity-75" />
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-[#8C6326]" />
-              </span>
-              <span className="text-[11px] font-semibold text-[#8C6326] tracking-wide uppercase font-['Outfit',sans-serif]">
-                {t.topBar.partnerBadge}
-              </span>
-            </div>
 
             {/* Main Headline */}
             <div>
@@ -156,38 +146,8 @@ export const Hero: React.FC<HeroProps> = ({ settings, lang }) => {
                 </div>
               </div>
 
-              {/* Floating Telemetry Glass Card 1 (Top Right) */}
-              <div className="absolute top-2 -right-2 sm:right-2 z-20 bg-white/95 backdrop-blur-md border border-[#EAD8B3] rounded-xl p-2.5 sm:p-3 shadow-lg shadow-black/5 flex items-center gap-2.5 animate-float hover:scale-105 transition-transform">
-                <div className="w-8 h-8 rounded-lg bg-[#FAF7F2] border border-[#EAD8B3] text-[#8C6326] flex items-center justify-center flex-shrink-0">
-                  <Zap className="w-4 h-4 text-[#C89C50]" />
-                </div>
-                <div className="text-left">
-                  <div className="text-[11px] font-bold text-[#121316] font-['Outfit',sans-serif]">
-                    100% E-Mobilität
-                  </div>
-                  <div className="text-[9px] text-slate-500 font-medium">
-                    Mercedes-Benz eSprinter
-                  </div>
-                </div>
-              </div>
-
-              {/* Floating Telemetry Glass Card 2 (Bottom Left) */}
-              <div className="absolute -bottom-3 -left-2 sm:left-2 z-20 bg-white/95 backdrop-blur-md border border-[#EAD8B3] rounded-xl p-2.5 sm:p-3 shadow-lg shadow-black/5 flex items-center gap-2.5 animate-float-delayed hover:scale-105 transition-transform">
-                <div className="w-8 h-8 rounded-lg bg-[#1E2024] text-[#C89C50] flex items-center justify-center flex-shrink-0">
-                  <MapPin className="w-4 h-4" />
-                </div>
-                <div className="text-left">
-                  <div className="text-[11px] font-bold text-[#121316] font-['Outfit',sans-serif]">
-                    Standort Paderborn
-                  </div>
-                  <div className="text-[9px] text-slate-500 font-medium">
-                    {settings.address} • {settings.postalCode} {settings.city}
-                  </div>
-                </div>
-              </div>
-
-              {/* Floating Telemetry Glass Card 3 (Bottom Right) */}
-              <div className="hidden sm:flex absolute bottom-8 -right-4 z-20 bg-white/95 backdrop-blur-md border border-slate-200 rounded-xl p-2.5 shadow-lg shadow-black/5 items-center gap-2 hover:scale-105 transition-transform">
+              {/* Centered Symmetrical Top DSP Partner Badge */}
+              <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 z-20 bg-white/95 backdrop-blur-md border border-[#EAD8B3] rounded-full px-4 py-2 shadow-lg shadow-black/10 flex items-center gap-2 hover:scale-105 transition-transform whitespace-nowrap">
                 <div className="flex items-center text-amber-500">
                   <Star className="w-3.5 h-3.5 fill-current" />
                   <Star className="w-3.5 h-3.5 fill-current" />
@@ -195,7 +155,7 @@ export const Hero: React.FC<HeroProps> = ({ settings, lang }) => {
                   <Star className="w-3.5 h-3.5 fill-current" />
                   <Star className="w-3.5 h-3.5 fill-current" />
                 </div>
-                <span className="text-[10px] font-bold text-[#121316]">
+                <span className="text-[11px] font-bold text-[#121316] font-['Outfit',sans-serif] tracking-wide">
                   Top DSP Partner
                 </span>
               </div>
@@ -212,14 +172,11 @@ export const Hero: React.FC<HeroProps> = ({ settings, lang }) => {
             
             {/* Stat 1 */}
             <div className="pt-3 md:pt-0 md:px-4 space-y-1">
-              <div className="text-2xl sm:text-3xl font-extrabold text-[#121316] font-['Outfit',sans-serif] flex items-center gap-1.5">
-                <span>{settings.city}</span>
-                <span className="text-xs px-2 py-0.5 rounded bg-[#FAF7F2] text-[#8C6326] border border-[#EAD8B3] font-bold font-sans">
-                  Hub {settings.amazonStationCode}
-                </span>
+              <div className="text-2xl sm:text-3xl font-extrabold text-[#121316] font-['Outfit',sans-serif]">
+                {settings.amazonStationCode || 'DNX5'}
               </div>
               <div className="text-xs text-slate-600 font-medium">
-                {lang === 'de' ? 'Amazon Verteilzentrum Mönkeloh' : 'Amazon Delivery Station'}
+                {lang === 'de' ? 'Autorisierter Amazon DSP' : 'Authorized Amazon DSP'}
               </div>
             </div>
 
