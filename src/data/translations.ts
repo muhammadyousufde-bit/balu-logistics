@@ -50,12 +50,18 @@ export interface TranslationContent {
     jobTitle: string;
     jobLocation: string;
     jobType: string;
+    jobIntro: string;
+    offerTitle: string;
+    offerItems: string[];
+    tasksTitle: string;
+    tasksItems: string[];
+    requirementsTitle: string;
+    requirementsItems: string[];
     benefitsTitle: string;
     benefits: Array<{
       title: string;
       desc: string;
     }>;
-    requirementsTitle: string;
     requirements: string[];
     timelineTag: string;
     timelineTitle: string;
@@ -268,10 +274,32 @@ export const translations: Record<Language, TranslationContent> = {
     careers: {
       sectionTag: 'Offene Stellen',
       title: 'Werde Teil unseres Zustellteams',
-      subtitle: 'Wir suchen engagierte und zuverlässige Zustellfahrer (m/w/d) in Vollzeit und Teilzeit.',
-      jobTitle: 'Zustellfahrer / Paketzusteller (m/w/d)',
+      subtitle: 'Wir suchen engagierte und zuverlässige Paketzusteller (m/w/d) für unser Team in Paderborn.',
+      jobTitle: 'Paketzusteller / Delivery Driver (m/w/d)',
       jobLocation: 'Paderborn & Region Ostwestfalen (Navarrastr. 8)',
-      jobType: 'Vollzeit / Teilzeit',
+      jobType: 'Vollzeit / Teilzeit / Minijob',
+      jobIntro: 'Werde Teil unseres Teams als Paketzusteller. Nach einer bezahlten Einarbeitung bist du eigenständig mit unseren modernen Zustellfahrzeugen unterwegs.',
+      offerTitle: 'Was wir bieten',
+      offerItems: [
+        'Attraktiver Stundenlohn + faire Leistungs- und Bonuszahlungen',
+        'Vollzeit / Teilzeit / Minijob – flexible Arbeitszeitmodelle',
+        'Modernes Firmenfahrzeug für deine Liefertouren gestellt (kein Privat-Pkw nötig)',
+        'Kostenlose Bereitstellung hochwertiger Arbeitskleidung & Equipment',
+        'Gründliche, bezahlte Einarbeitung ab Tag 1',
+        'Pünktliche Bezahlung und ein krisensicherer Arbeitsplatz'
+      ],
+      tasksTitle: 'Deine Aufgaben',
+      tasksItems: [
+        'Beladen der vorbereiteten Touren am Depot',
+        'Zuverlässige und sichere Auslieferung von Paketsendungen',
+        'Führen unserer modernen Transporter mit Navigationshilfe'
+      ],
+      requirementsTitle: 'Was du mitbringst',
+      requirementsItems: [
+        'Gültiger Pkw-Führerschein (Klasse B)',
+        'Zuverlässigkeit, Pünktlichkeit und kundenfreundliches Auftreten',
+        'Grundlegende körperliche Fitness und Spaß an eigenständiger Arbeit'
+      ],
       benefitsTitle: 'Was wir bieten',
       benefits: [
         {
@@ -295,7 +323,6 @@ export const translations: Record<Language, TranslationContent> = {
           desc: 'Hochwertige Arbeitsschuhe, wetterfeste Schutzkleidung und moderne Navigationsgeräte für einen rückenschonenden Alltag.'
         }
       ],
-      requirementsTitle: 'Das bringst du mit',
       requirements: [
         'Gültiger Führerschein der Klasse B (PKW bis 3,5 t) erforderlich',
         'Mindestalter gemäß betrieblicher Vorgabe (ab 18 bzw. 21 Jahre)',
@@ -346,7 +373,7 @@ export const translations: Record<Language, TranslationContent> = {
       quizResultPendingDesc: 'Für die Anstellung als Zustellfahrer sind diese 3 gesetzlichen Grundlagen erforderlich.',
       ctaCardTitle: 'Bereit für die Straße?',
       ctaCardDesc: 'Die Bewerbung dauert nur 2 Minuten. Kein Anschreiben und kein Lebenslauf zwingend erforderlich.',
-      ctaButton: 'Direkt online bewerben'
+      ctaButton: 'Jetzt bewerben'
     },
     contact: {
       sectionTag: 'Kontakt & Standort',
@@ -599,10 +626,32 @@ export const translations: Record<Language, TranslationContent> = {
     careers: {
       sectionTag: 'Open Positions',
       title: 'Join Our Delivery Team',
-      subtitle: 'We are hiring dedicated and reliable Delivery Associates (m/f/d) for full-time and part-time positions.',
-      jobTitle: 'Delivery Associate / Courier (m/f/d)',
+      subtitle: 'We are hiring dedicated and reliable parcel delivery drivers (m/f/d) for our team in Paderborn.',
+      jobTitle: 'Paketzusteller / Delivery Driver (m/w/d)',
       jobLocation: 'Paderborn & East Westphalia (Navarrastr. 8)',
-      jobType: 'Full-Time / Part-Time',
+      jobType: 'Vollzeit / Teilzeit / Minijob',
+      jobIntro: 'Become part of our team as a delivery driver. After paid onboarding, you will independently drive our modern delivery vehicles.',
+      offerTitle: 'What We Offer',
+      offerItems: [
+        'Attractive hourly wage + fair performance & bonus payments',
+        'Full-time / Part-time / Minijob – flexible working hour models',
+        'Modern company vehicle provided for your delivery routes (no private car needed)',
+        'Free provision of high-quality workwear & equipment',
+        'Thorough, paid onboarding from day 1',
+        'Punctual payment and a recession-proof job'
+      ],
+      tasksTitle: 'Your Tasks',
+      tasksItems: [
+        'Loading pre-sorted delivery routes at the depot',
+        'Reliable and safe delivery of parcel shipments',
+        'Operating our modern vans with digital navigation assistance'
+      ],
+      requirementsTitle: 'What You Bring',
+      requirementsItems: [
+        'Valid passenger car driver’s license (Class B)',
+        'Reliability, punctuality, and friendly customer-oriented attitude',
+        'Basic physical fitness and enjoyment of independent work'
+      ],
       benefitsTitle: 'What We Offer',
       benefits: [
         {
@@ -626,7 +675,6 @@ export const translations: Record<Language, TranslationContent> = {
           desc: 'High-quality safety footwear, all-weather gear, and modern digital routing for a safe, ergonomic work environment.'
         }
       ],
-      requirementsTitle: 'What We Look For',
       requirements: [
         'Valid Class B driver’s license (standard car up to 3.5 t) required',
         'Minimum age requirement (18/21 years)',
@@ -677,7 +725,7 @@ export const translations: Record<Language, TranslationContent> = {
       quizResultPendingDesc: 'These 3 legal requirements are necessary for starting as a delivery associate.',
       ctaCardTitle: 'Ready to Hit the Road?',
       ctaCardDesc: 'Applying takes only 2 minutes. No lengthy cover letter required.',
-      ctaButton: 'Apply Online Now'
+      ctaButton: 'Apply Now'
     },
     contact: {
       sectionTag: 'Contact & Station Location',
